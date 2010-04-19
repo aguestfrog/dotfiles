@@ -1,0 +1,11 @@
+URxvt.scrollBar:        false
+URxvt.buffered:         true
+URxvt.background:       black
+URxvt.foreground:       white
+URxvt.cursorColor:      green
+URxvt.underlineColor:   yellow
+URxvt*font: xft:DejaVu Sans Mono-10:antialias=true
+URxvt*boldFont: xft:DejaVu Sans Mono-10:style=bold:antialias=true
+URxvt*italicFont: xft:DejaVu Sans Mono-10:style=italic:antialias=true
+URxvt*boldItalicFont: xft:DejaVu Sans Mono-10:style=bolditalic:antialias=true
+
