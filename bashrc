@@ -47,3 +47,5 @@ alias grep='grep --colour=auto'
 
 # custom inputrc
 export INPUTRC=~/.inputrc
+alias mounts="mount | column -t"
+wiki() { dig +short txt $1.wp.dg.cx; }
