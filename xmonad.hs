@@ -16,7 +16,7 @@ myTerminal :: String
 myTerminal = "urxvt"
 
 myBrowser :: String
-myBrowser = "~/bin/chromium"
+myBrowser = "chromium-browser"
  
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmobarrc"

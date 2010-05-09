@@ -29,4 +29,11 @@ syntax on
 filetype plugin on
 filetype indent on
 
+map <F5> :make<CR>
 
+
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  autocmd FileType tex set formatoptions+=t textwidth=80 nocindent
+  autocmd FileType tex set makeprg=pdflatex\ %
+endif
