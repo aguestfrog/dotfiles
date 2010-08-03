@@ -3,7 +3,6 @@ VIM
 
 Plugins:
 --------
-
  * Haskell Syntax (www.vim.org/scripts/script.php?script_id=3034)
  * transparent gpg (http://www.vim.org/scripts/script.php?script_id=661)
  * matchit (copy from local vim installation) (http://www.vim.org/scripts/script.php?script_id=39)
