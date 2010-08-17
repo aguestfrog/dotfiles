@@ -38,11 +38,6 @@ main = do
     mykeys (XConfig {modMask = modm}) = M.fromList $
          [ ((modm , xK_Return), spawn $ myTerminal)
          , ((modm, xK_f), spawn myBrowser) 
-         , ((modm, xK_y), spawn (myBrowser++" --app spiegel.de"))
-         , ((modm, xK_u), spawn (myBrowser++" --app heise.de"))
-         , ((modm, xK_i), spawn (myBrowser++" --app reddit.com"))
-         , ((modm, xK_o), spawn (myBrowser++" --app slashdot.org"))
-         , ((modm, xK_m), spawn (myBrowser++" --app 'https://meebo.com'"))
          --, ((modm, xK_i), spawn "urxvtc -e ~/bin/starticq.sh")
          --, ((0      , 0x1008ff16 ), spawn "ncmpcpp prev")
          --, ((0      , 0x1008ff17 ), spawn "ncmpcpp next")
