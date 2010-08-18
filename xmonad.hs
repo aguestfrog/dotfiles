@@ -8,6 +8,9 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
+-- for media buttons
+import Graphics.X11.ExtraTypes.XF86
+
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -39,13 +42,15 @@ main = do
          [ ((modm , xK_Return), spawn $ myTerminal)
          , ((modm, xK_f), spawn myBrowser) 
          --, ((modm, xK_i), spawn "urxvtc -e ~/bin/starticq.sh")
-         --, ((0      , 0x1008ff16 ), spawn "ncmpcpp prev")
-         --, ((0      , 0x1008ff17 ), spawn "ncmpcpp next")
-         --, ((0      , 0x1008ff14 ), spawn "ncmpcpp toggle")
-         , ((0 , 0x1008ff11  ), spawn "amixer -q set Master 1-")   -- mod1-down %! Decrease audio volume
-         , ((0 , 0x1008ff13    ), spawn "amixer -q set Master 1+")   -- mod1-up   %! Increase audio volume
+         , ((0, xF86XK_AudioMute), spawn "amixer -q set PCM toggle")
+         , ((0, xF86XK_AudioLowerVolume), spawn "amixer -q set Master 1-")
+         , ((0, xF86XK_AudioRaiseVolume ), spawn "amixer -q set Master 1+")
+         , ((0, xF86XK_AudioStop), spawn "ncmpcpp stop")
+         , ((0, xF86XK_AudioPrev), spawn "ncmpcpp prev")
+         , ((0, xF86XK_AudioNext), spawn "ncmpcpp next")
+         , ((0, xF86XK_AudioPlay), spawn "ncmpcpp toggle")
 
-         , ((0, 0x1008ff2f), spawn "sudo pm-suspend")
-         , ((mod4Mask .|. shiftMask, xK_z), spawn "xlock -mode blank")
-         ]
+         , ((0, xF86XK_Sleep), spawn "sudo pm-suspend")
+         , ((mod4Mask .|. shiftMask, xK_z), spawn "xlock -mode blank") 
+         ] -- consult http://hackage.haskell.org/packages/archive/X11/1.5.0.0/doc/html/Graphics-X11-ExtraTypes-XF86.html
 

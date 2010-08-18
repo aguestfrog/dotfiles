@@ -1,0 +1,8 @@
+"xvkbd -text "\[XF86AudioPlay]""
+  b:17
+"xvkbd -text "\[XF86AudioStop]""
+  b:18
+"xvkbd -text "\[XF86AudioPrev]""
+  b:19
+"xvkbd -text "\[XF86AudioNext]""
+  b:20
