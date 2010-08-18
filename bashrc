@@ -49,3 +49,4 @@ alias grep='grep --colour=auto'
 export INPUTRC=~/.inputrc
 alias mounts="mount | column -t"
 wiki() { dig +short txt $1.wp.dg.cx; }
+#perl -ne 'print  if s/.*(\d{4}).*/\1/' file
