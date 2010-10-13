@@ -50,3 +50,4 @@ export INPUTRC=~/.inputrc
 alias mounts="mount | column -t"
 wiki() { dig +short txt $1.wp.dg.cx; }
 #perl -ne 'print  if s/.*(\d{4}).*/\1/' file
+alias fip="mplayer http://mp3.live.tv-radio.com/fip/all/fiphautdebit.mp3"
